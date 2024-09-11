@@ -1,0 +1,41 @@
+:root {
+
+    /* PRIMARY COLORS  */
+
+    --clr-primary-400: ; 
+
+    /* SECONDARY COLORS */
+
+    /* ACCENT COLORS  */
+
+    /* FONT SIZE  */
+
+    --fs-sm: ; 
+    --fs-base: ; 
+    --fs-md: ; 
+    --fs-large: ; 
+    --fs-xl: ; 
+
+    /* FONT WEIGHT  */
+
+    --fw-ex_light: 100; 
+    --fw-light: 200; 
+    --fw-thin: 300; 
+    --fw-regular: 400; 
+    --fw-md: 500; 
+    --fw-semi_bold: 600; 
+    --fw-bold: 700; 
+    --fw-black: 800; 
+
+
+
+
+}
+
+* {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font: inherit; 
+}
+
