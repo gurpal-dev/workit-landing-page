@@ -59,13 +59,22 @@ body {
 
 }
 
+
+h2,
+p {
+    line-height: 1.7rem;
+}
+
 img {
-    width: 100%;
+    max-width: 100%;
+    display: block;
 }
 
 ul {
     list-style: none;
 }
+
+
 
 a {
     text-decoration: none; 
@@ -126,7 +135,6 @@ header {
 
 .title {
     margin-inline: auto;
-    /* max-width: 550px; */
     text-align: center;
 
     .underline{
@@ -134,7 +142,7 @@ header {
     }
 
     h1{
-        width: 11ch; 
+        max-width: 11ch; 
         margin-inline: auto;
     }
 
@@ -179,19 +187,58 @@ header {
         height: 15%;
         background: url('public/curved-hero.svg'); 
         background-repeat: no-repeat;
+        background-size: 100% 100%;
         top: 40%; 
         left: 0; 
-        /* z-index: -1; */
+        
         
     }
 }
 
 .hero-image {
+    position: relative;
     max-width: 760px; 
     margin-inline: auto;
     margin-top: 2.5rem;
-    
+    z-index: 1; 
+    padding-inline: 32px;
+}
+
+
+.main-feature_list {
+    display: flex; 
+    flex-direction: column; 
+    text-align: center; 
+    gap: 2rem;
+
+    li{
+        display: grid; 
+        grid-template-columns: repeat(1, 1fr);
+
+        .list_num{
+            display: inline-block;
+            flex: none;
+            padding: 1rem;
+            border: 1px solid var(--clr-primary-900); 
+            /* border-radius: 50%;  */
+        }
+
+        h2{
+            margin-block-end: 1rem;
+
+            @media(width >= 30em){
+                margin-block-end: 1.75rem;
+            }
+        }
     }
+    
+}
+
+@media (width >= 30em) {
+    .main-feature_list{
+        flex-direction: row; 
+    }    
+}
 
     
     
