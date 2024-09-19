@@ -210,37 +210,124 @@ header {
     flex-direction: column; 
     text-align: center; 
     gap: 2rem;
+    padding-block-start: 4rem;
 
     li{
         display: grid; 
         grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        
 
         .list_num{
-            display: inline-block;
-            flex: none;
-            padding: 1rem;
+            font-family: var(--ff-headings);
+            display: grid;
+            place-items: center;
+            width: 48px; 
+            aspect-ratio: 1;
+            padding: .5rem;
             border: 1px solid var(--clr-primary-900); 
-            /* border-radius: 50%;  */
+            border-radius: 50%;
+            margin-inline: auto;
+            
         }
 
-        h2{
-            margin-block-end: 1rem;
+        .list_num{
+            @media(width > 64em){
+                margin-block-end: 2.5rem;
 
-            @media(width >= 30em){
-                margin-block-end: 1.75rem;
             }
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
         }
     }
     
 }
 
+.founder-section{ 
+    display: grid; 
+    grid-template-columns: repeat(1, fr); 
+    place-items: center;
+    
+
+    
+
+    img{
+        width: 280px; 
+    }
+
+    .testimonial{
+        display: flex;
+        flex-direction: column; 
+        gap: 2rem;
+        padding: 2rem;
+        background: var(--clr-primary-900); 
+        color: white; 
+        text-align: center;
+
+
+        h2{
+            font-size: clamp(2rem, 1.7rem + 1.5vw, 3.5rem);
+        }
+
+        a {
+            width: fit-content;
+            background: var(--clr-accent-400);
+            padding: .7em 2em;
+            color: var(--clr-primary-900); 
+            margin-inline: auto;
+            border: 2px solid; 
+
+            &:is(:hover, :focus, :active){
+                background: var(--clr-primary-900); 
+                color: var(--clr-accent-400); 
+                border: 2px solid; 
+            }
+    
+        }
+    }
+
+}
+
 @media (width >= 30em) {
     .main-feature_list{
         flex-direction: row; 
-    }    
+    }
+    
+    li h2 {
+        margin-block-end: .75rem;
+    }
+    
 }
 
+    /* TABLET & IPAD SCREEN */
+
+@media (width > 30em) and ( width <= 64em ) {
+    .main-feature_list{
+        flex-direction: column; 
+        text-align: left; 
+     
     
+    li {
+        grid-template-columns: min-content 1fr;
+        column-gap: 3.5rem;
+    }
+
+    }
+
+    .list_num {
+        grid-column: 1 / 1; 
+        position: relative;
+        top: 70%;    
+        
+    }
+
+    li h2, p {
+        grid-column: 2; 
+    }
+
+}
     
 
 
