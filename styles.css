@@ -250,7 +250,11 @@ header {
     grid-template-columns: repeat(1, fr); 
     place-items: center;
     
-
+    .founder-img{
+        position: relative; 
+        top: 15%; 
+        z-index: -1; 
+    }
     
 
     img{
@@ -325,6 +329,25 @@ header {
 
     li h2, p {
         grid-column: 2; 
+    }
+
+    .founder-section {
+        grid-template-columns: 200px, 1fr; 
+        
+        .founder-img{
+            grid-column: 1 / 1; 
+            position: absolute;
+            top: 0; 
+            left: 0; 
+            z-index: 1; 
+            width: 200px;  
+           
+        }
+
+        .testimonial {
+            grid-column: 2 / 2; 
+            position: relative; 
+        }
     }
 
 }
