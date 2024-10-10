@@ -249,6 +249,7 @@ header {
     display: grid; 
     grid-template-columns: repeat(1, fr); 
     place-items: center;
+    padding-block-start: 14rem; 
     
     .founder-img{
         position: relative; 
@@ -338,20 +339,38 @@ header {
 
     .founder-section {
         grid-template-columns: 200px, 1fr; 
+        position: relative; 
+        
         
         .founder-img{
             grid-column: 1 / 1; 
             position: relative;
             top: 0; 
             left: 0; 
-            z-index: 1; 
+            /* z-index: 1;  */
             width: 200px;  
            
+        }
+
+        .founder-img{
+            position: relative; 
+            top: -55%; 
+            left: 35%; 
+             
         }
 
        
     }
 
+}
+
+@media (width>= 64em){
+    .founder-section{
+        grid-template-columns: 477px, 1fr;
+
+
+        
+    }
 }
     
 
