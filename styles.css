@@ -162,6 +162,7 @@ header {
         color: var(--clr-primary-900); 
         margin-top: 2.5rem;
         transition: color .5s;
+        border : 2px solid var(--clr-accent-400); 
         
 
         &:is(:hover, :focus, :active){
@@ -364,7 +365,7 @@ header {
 
 }
 
-@media (width>= 64em){
+@media(width >= 64em){
     .founder-section{
         grid-template-columns: 477px, 1fr;
 
